@@ -16,7 +16,7 @@ This is the [RIPE Atlas software probe](https://atlas.ripe.net/docs/software-pro
 
 The following prebuilt tags are available at [Docker Hub](https://hub.docker.com/r/jamesits/ripe-atlas). The `latest` tag supports [multi-arch](https://www.docker.com/blog/multi-arch-build-and-images-the-simple-way/), and should be used by default.
 
-* **`latest`: For all supported devices listed below (multi-arch)**
+* **`latest`: پردازنده های پشتیبانی  شده**
 * `latest-arm64`: For arm64 (aarch64) devices
 * `latest-armv7l`: For armv7l (armhf) devices
 * `latest-i386`: For i386 devices
@@ -28,7 +28,7 @@ The following prebuilt tags are available at [Docker Hub](https://hub.docker.com
 
 First we start the container:
 
-```shell
+```shell   اجرای داکر 
 docker run --detach --restart=always \
 	--log-driver json-file --log-opt max-size=10m \
 	--cpus=1 --memory=64m --memory-reservation=64m \
@@ -55,10 +55,10 @@ docker-compose up -d
 
 Fetch the generated public key:
 
-```shell
+```shell  پس از اجرای داکر این کامند را در داکر خود اجرا کنید کلید خروجی را در رایپ ثبت کنید 
 cat /var/atlas-probe/etc/probe_key.pub
 ```
-
+استفاده از کلید خروجی گرفته شده در اکانت اطلس جهت ثبت پراب اطلس جدید 
 [Register](https://atlas.ripe.net/apply/swprobe/) the probe with your public key. After the registration being manually processed, you'll see your new probe in your account.
 
 ## Building
